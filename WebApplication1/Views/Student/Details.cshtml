@@ -1,0 +1,36 @@
+﻿
+@{
+    var Students = ViewData["Students"] as List<WebApplication1.Models.Student>;
+}
+
+<h2>Details</h2>
+
+
+
+
+
+<h2>Student List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Students)
+        {
+            <tr>
+                <td>@student.Id</td>
+                <td>@student.Name</td>
+                <td>@student.Age</td>
+                <td>@student.Course</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

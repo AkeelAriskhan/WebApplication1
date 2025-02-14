@@ -1,0 +1,30 @@
+﻿@*@model IEnumerable<WebApplication1.Models.Course>*@
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Course List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Course Name</th>
+            <th>Instructor</th>
+            <th>Duration (Weeks)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.Id</td>
+                <td>@course.Name</td>
+                <td>@course.Instructor</td>
+                <td>@course.DurationWeeks</td>
+            </tr>
+        }
+    </tbody>
+</table>
